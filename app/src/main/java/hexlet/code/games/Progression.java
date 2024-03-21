@@ -6,7 +6,9 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.MAX_NUMBER;
+import static hexlet.code.Engine.MIN_NUMBER;
 
 public class Progression {
 
