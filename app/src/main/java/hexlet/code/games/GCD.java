@@ -6,15 +6,18 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
+import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.MAX_NUMBER;
+
 public class GCD {
     public static void gcd(Scanner scanner) {
         var random = new Random();
         var userName = Cli.greetByName(scanner);
 
         System.out.println("Find the greatest common divisor of given numbers.");
-        for (var i = 0; i < 3; i++) {
-            var firstNumber = random.nextInt(100);
-            var secondNumber = random.nextInt(100);
+        for (var i = 0; i < GAME_ROUNDS; i++) {
+            var firstNumber = random.nextInt(MAX_NUMBER);
+            var secondNumber = random.nextInt(MAX_NUMBER);
             int rightAnswer = getGcd(firstNumber, secondNumber);
 
             Engine.engine(

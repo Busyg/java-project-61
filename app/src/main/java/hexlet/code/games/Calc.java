@@ -6,6 +6,9 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
+import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.MAX_NUMBER;
+
 public class Calc {
     public static void calc(Scanner scanner) {
         var random = new Random();
@@ -13,9 +16,9 @@ public class Calc {
         var operators = new String[] {"+", "-", "*"};
 
         System.out.println("What is the result of the expression?");
-        for (var i = 0; i < 3; i++) {
-            var firstNumber = random.nextInt(100);
-            var secondNumber = random.nextInt(100);
+        for (var i = 0; i < GAME_ROUNDS; i++) {
+            var firstNumber = random.nextInt(MAX_NUMBER);
+            var secondNumber = random.nextInt(MAX_NUMBER);
             var randomOperator = operators[random.nextInt(operators.length)];
             int rightAnswer = 0;
 

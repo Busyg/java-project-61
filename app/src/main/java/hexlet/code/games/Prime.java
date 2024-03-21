@@ -6,14 +6,17 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
+import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.MAX_NUMBER;
+
 public class Prime {
     public static void prime(Scanner scanner) {
         var random = new Random();
         var userName = Cli.greetByName(scanner);
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (var i = 0; i < 3; i++) {
-            int number = random.nextInt(100);
+        for (var i = 0; i < GAME_ROUNDS; i++) {
+            int number = random.nextInt(MAX_NUMBER);
             String rightAnswer = isPrime(number) ? "yes" : "no";
             Engine.engine(scanner, Integer.toString(number), rightAnswer, userName);
         }
