@@ -11,7 +11,7 @@ import static hexlet.code.Engine.*;
 public class Progression {
 
     public static final int MIN_PROGRESSION = 5;
-    public static final int MAX_PROGRESSION = 5;
+    public static final int MAX_PROGRESSION = 10;
 
     public static void progression(Scanner scanner) {
         var random = new Random();
