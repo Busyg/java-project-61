@@ -11,7 +11,7 @@ public class Progression {
         var random = new Random();
         var userName = Cli.greetByName(scanner);
 
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println("What number is missing in the progression?");
         for (var i = 0; i < 3; i++) {
             var progressionElements = random.nextInt(5, 10);
             var firstNumber = random.nextInt(1, 100);
