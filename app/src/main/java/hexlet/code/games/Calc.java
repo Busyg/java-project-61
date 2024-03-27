@@ -5,12 +5,14 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.MAX_NUMBER;
+
 
 public class Calc {
     public static void calc(Scanner scanner) {
         var random = new Random();
-        String [][] questionsArray = new String[3][];
+        String[][] questionsArray = new String[GAME_ROUNDS][];
         String rules = "What is the result of the expression?";
         var operators = new String[] {"+", "-", "*"};
 
@@ -33,8 +35,11 @@ public class Calc {
                 default -> {
                 }
             }
-            questionsArray[i] = new String[] {firstNumber + " " + randomOperator + " " + secondNumber, Integer.toString(rightAnswer)};
+            questionsArray[i] = new String[] {
+                firstNumber + " " + randomOperator + " " + secondNumber,
+                Integer.toString(rightAnswer)
+            };
         }
-        Engine.engine(scanner,questionsArray,rules);
+        Engine.engine(scanner, questionsArray, rules);
     }
 }

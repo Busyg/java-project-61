@@ -11,7 +11,7 @@ import static hexlet.code.Engine.MAX_NUMBER;
 public class GCD {
     public static void gcd(Scanner scanner) {
         var random = new Random();
-        String [][] questionsArray = new String[3][];
+        String[][] questionsArray = new String[GAME_ROUNDS][];
         String rules = "Find the greatest common divisor of given numbers.";
 
         for (var i = 0; i < GAME_ROUNDS; i++) {
@@ -21,7 +21,7 @@ public class GCD {
 
             questionsArray[i] = new String[] {firstNumber + " " + secondNumber, Integer.toString(rightAnswer)};
         }
-        Engine.engine(scanner,questionsArray,rules);
+        Engine.engine(scanner, questionsArray, rules);
     }
 
     static int getGcd(int firstNumber, int secondNumber) {

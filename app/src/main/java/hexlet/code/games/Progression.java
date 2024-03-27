@@ -16,7 +16,7 @@ public class Progression {
 
     public static void progression(Scanner scanner) {
         var random = new Random();
-        String [][] questionsArray = new String[3][];
+        String[][] questionsArray = new String[GAME_ROUNDS][];
         String rules = "What number is missing in the progression?";
 
         for (var i = 0; i < GAME_ROUNDS; i++) {
@@ -38,6 +38,6 @@ public class Progression {
 
             questionsArray[i] = new String[] {progressionString, Integer.toString(rightAnswer)};
         }
-        Engine.engine(scanner,questionsArray,rules);
+        Engine.engine(scanner, questionsArray, rules);
     }
 }

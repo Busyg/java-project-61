@@ -5,18 +5,19 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-import static hexlet.code.Engine.*;
+import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.MAX_NUMBER;
 
 public class Even {
     public static void checkEven(Scanner scanner) {
         Random random = new Random();
-        String [][] questionsArray = new String[3][];
+        String[][] questionsArray = new String[GAME_ROUNDS][];
         String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         for (var i = 0; i < GAME_ROUNDS; i++) {
             int number = random.nextInt(MAX_NUMBER);
             String rightAnswer = number % 2 == 0 ? "yes" : "no";
             questionsArray[i] = new String[] {Integer.toString(number), rightAnswer};
         }
-        Engine.engine(scanner,questionsArray,rules);
+        Engine.engine(scanner, questionsArray, rules);
     }
 }
