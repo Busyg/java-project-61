@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Random;
@@ -12,15 +11,15 @@ import static hexlet.code.Engine.MAX_NUMBER;
 public class Prime {
     public static void prime(Scanner scanner) {
         var random = new Random();
-        var userName = Cli.greetByName(scanner);
+        String [][] questionsArray = new String[3][];
+        String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         for (var i = 0; i < GAME_ROUNDS; i++) {
             int number = random.nextInt(MAX_NUMBER);
             String rightAnswer = isPrime(number) ? "yes" : "no";
-            Engine.engine(scanner, Integer.toString(number), rightAnswer, userName);
+            questionsArray[i] = new String[] {Integer.toString(number), rightAnswer};
         }
-        System.out.println("Congratulations, " + userName + "!");
+        Engine.engine(scanner,questionsArray,rules);
     }
 
     static  boolean isPrime(int number) {

@@ -8,16 +8,21 @@ public class Engine {
     public static final int MIN_NUMBER = 1;
     public static final int MAX_NUMBER = 100;
 
-    public static void engine(Scanner scanner, String question, String rightAnswer, String userName) {
-        System.out.println("Question: " + question);
-        String answer = scanner.next();
-        System.out.println("Your answer: " + answer);
-        if (answer.equals(rightAnswer)) {
-            System.out.println("Correct!");
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + rightAnswer + "'.\n"
-                    + "Let's try again, " + userName + "!");
-            System.exit(0);
+    public static void engine(Scanner scanner, String[][] questionsArray, String rules) {
+        String userName = Cli.greetByName(scanner);
+        System.out.println(rules);
+        for (String[] question : questionsArray) {
+            System.out.println("Question: " + question[0]);
+            String answer = scanner.next();
+            System.out.println("Your answer: " + answer);
+            if (answer.equals(question[1])) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + question[1] + "'.\n"
+                        + "Let's try again, " + userName + "!");
+                return;
+            }
         }
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

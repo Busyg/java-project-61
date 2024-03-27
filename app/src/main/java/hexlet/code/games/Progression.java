@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Random;
@@ -17,9 +16,9 @@ public class Progression {
 
     public static void progression(Scanner scanner) {
         var random = new Random();
-        var userName = Cli.greetByName(scanner);
+        String [][] questionsArray = new String[3][];
+        String rules = "What number is missing in the progression?";
 
-        System.out.println("What number is missing in the progression?");
         for (var i = 0; i < GAME_ROUNDS; i++) {
             var progressionElements = random.nextInt(MIN_PROGRESSION, MAX_PROGRESSION);
             var firstNumber = random.nextInt(MIN_NUMBER, MAX_NUMBER);
@@ -37,13 +36,8 @@ public class Progression {
                 }
             }
 
-            Engine.engine(
-                    scanner,
-                    progressionString,
-                    Integer.toString(rightAnswer),
-                    userName
-            );
+            questionsArray[i] = new String[] {progressionString, Integer.toString(rightAnswer)};
         }
-        System.out.println("Congratulations, " + userName + "!");
+        Engine.engine(scanner,questionsArray,rules);
     }
 }

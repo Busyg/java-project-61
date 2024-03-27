@@ -1,21 +1,19 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Random;
 import java.util.Scanner;
 
-import static hexlet.code.Engine.GAME_ROUNDS;
-import static hexlet.code.Engine.MAX_NUMBER;
+import static hexlet.code.Engine.*;
 
 public class Calc {
     public static void calc(Scanner scanner) {
         var random = new Random();
-        var userName = Cli.greetByName(scanner);
+        String [][] questionsArray = new String[3][];
+        String rules = "What is the result of the expression?";
         var operators = new String[] {"+", "-", "*"};
 
-        System.out.println("What is the result of the expression?");
         for (var i = 0; i < GAME_ROUNDS; i++) {
             var firstNumber = random.nextInt(MAX_NUMBER);
             var secondNumber = random.nextInt(MAX_NUMBER);
@@ -35,13 +33,8 @@ public class Calc {
                 default -> {
                 }
             }
-            Engine.engine(
-                scanner,
-                firstNumber + " " + randomOperator + " " + secondNumber,
-                Integer.toString(rightAnswer),
-                userName
-            );
+            questionsArray[i] = new String[] {firstNumber + " " + randomOperator + " " + secondNumber, Integer.toString(rightAnswer)};
         }
-        System.out.println("Congratulations, " + userName + "!");
+        Engine.engine(scanner,questionsArray,rules);
     }
 }
