@@ -11,7 +11,7 @@ import static hexlet.code.Engine.MAX_NUMBER;
 public class Prime {
     public static void prime(Scanner scanner) {
         var random = new Random();
-        String [][] questionsArray = new String[GAME_ROUNDS][];
+        String[][] questionsArray = new String[GAME_ROUNDS][];
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
         for (var i = 0; i < GAME_ROUNDS; i++) {
