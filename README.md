@@ -3,16 +3,16 @@
 <a href="https://codeclimate.com/github/Busyg/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/a3599ab9c0c5662dd41d/maintainability" /></a>
 
 Even:
-<a href="https://asciinema.org/a/ABYbUL6Rjliq7XVT2siv2dowe" target="_blank"><img src="https://asciinema.org/a/ABYbUL6Rjliq7XVT2siv2dowe.svg" /></a>
+[![asciicast](https://asciinema.org/a/tQbjfAJ565TMFKzbdFvKfMmhS.svg)](https://asciinema.org/a/tQbjfAJ565TMFKzbdFvKfMmhS)
 
 Calc:
-<a href="https://asciinema.org/a/zidebzVkxGIzTv3C2wE6ua85C" target="_blank"><img src="https://asciinema.org/a/zidebzVkxGIzTv3C2wE6ua85C.svg" /></a>
+[![asciicast](https://asciinema.org/a/BJo2F7RjtowmAQnuFkLxjslcn.svg)](https://asciinema.org/a/BJo2F7RjtowmAQnuFkLxjslcn)
 
 GCD:
-<a href="https://asciinema.org/a/ZZvrSEYH8masVPPxVrcMEx8jR" target="_blank"><img src="https://asciinema.org/a/ZZvrSEYH8masVPPxVrcMEx8jR.svg" /></a>
+[![asciicast](https://asciinema.org/a/36tofT6BkH1KEgMgiN7r73utT.svg)](https://asciinema.org/a/36tofT6BkH1KEgMgiN7r73utT)
 
 Progression:
-<a href="https://asciinema.org/a/J6PPb7ke5esX02zEq1YRDFIpJ" target="_blank"><img src="https://asciinema.org/a/J6PPb7ke5esX02zEq1YRDFIpJ.svg" /></a>
+[![asciicast](https://asciinema.org/a/862gw8n6QD2aSJs409VP0xEPb.svg)](https://asciinema.org/a/862gw8n6QD2aSJs409VP0xEPb)
 
 Prime:
-<a href="https://asciinema.org/a/M4KgoeEl2JUMCh087LSNjIstm" target="_blank"><img src="https://asciinema.org/a/M4KgoeEl2JUMCh087LSNjIstm.svg" /></a>
+[![asciicast](https://asciinema.org/a/0UffNda8LEjO4QGmshDkf4ZHG.svg)](https://asciinema.org/a/0UffNda8LEjO4QGmshDkf4ZHG)
