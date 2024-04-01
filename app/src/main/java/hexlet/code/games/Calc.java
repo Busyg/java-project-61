@@ -10,13 +10,13 @@ import static hexlet.code.Utils.randomInt;
 
 public class Calc {
     public static final String[] OPERATORS = {"+", "-", "*"};
-    public static void calc(Scanner scanner) {
+    public static void run(Scanner scanner) {
         String[][] questionsArray = new String[GAME_ROUNDS][];
         String rules = "What is the result of the expression?";
         for (var i = 0; i < GAME_ROUNDS; i++) {
             questionsArray[i] = generateRoundData();
         }
-        Engine.engine(scanner, questionsArray, rules);
+        Engine.startGame(scanner, questionsArray, rules);
     }
 
     public static String[] generateRoundData() {
@@ -25,25 +25,17 @@ public class Calc {
         var randomOperator = OPERATORS[randomInt(OPERATORS.length)];
         int rightAnswer = calculateAnswer(randomOperator, firstNumber, secondNumber);
         return new String[] {
-                firstNumber + " " + randomOperator + " " + secondNumber,
-                Integer.toString(rightAnswer)
+            firstNumber + " " + randomOperator + " " + secondNumber,
+            Integer.toString(rightAnswer)
         };
     }
 
     public static int calculateAnswer(String operator, int firstNumber, int secondNumber) {
-        switch (operator) {
-            case "+" -> {
-                return firstNumber + secondNumber;
-            }
-            case "-" -> {
-                return firstNumber - secondNumber;
-            }
-            case "*" -> {
-                return firstNumber * secondNumber;
-            }
-            default -> {
-                throw new RuntimeException("Unknown operator");
-            }
-        }
+        return switch (operator) {
+            case "+" -> firstNumber + secondNumber;
+            case "-" -> firstNumber - secondNumber;
+            case "*" -> firstNumber * secondNumber;
+            default -> throw new RuntimeException("Unknown operator");
+        };
     }
 }

@@ -8,13 +8,13 @@ import static hexlet.code.Engine.GAME_ROUNDS;
 import static hexlet.code.Utils.randomInt;
 
 public class Prime {
-    public static void prime(Scanner scanner) {
+    public static void run(Scanner scanner) {
         String[][] questionsArray = new String[GAME_ROUNDS][];
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         for (var i = 0; i < GAME_ROUNDS; i++) {
             questionsArray[i] = generateRoundData();
         }
-        Engine.engine(scanner, questionsArray, rules);
+        Engine.startGame(scanner, questionsArray, rules);
     }
 
     public static String[] generateRoundData() {

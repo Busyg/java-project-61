@@ -6,7 +6,7 @@ public class Engine {
 
     public static final int GAME_ROUNDS = 3;
 
-    public static void engine(Scanner scanner, String[][] questionsArray, String rules) {
+    public static void startGame(Scanner scanner, String[][] questionsArray, String rules) {
         String userName = Cli.greetByName(scanner);
         System.out.println(rules);
         for (String[] question : questionsArray) {
