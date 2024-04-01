@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static hexlet.code.Engine.GAME_ROUNDS;
@@ -28,9 +27,9 @@ public class Progression {
         var step = randomInt();
         var questionIndex = randomInt(1, progressionElements);
         var rightAnswer = firstNumber + (step * questionIndex);
-        var progressionString = generateProgression(firstNumber, step, progressionElements);
-        progressionString[questionIndex] = " ..";
-        return new String[] {Arrays.toString(progressionString), Integer.toString(rightAnswer)};
+        var progressionArr = generateProgression(firstNumber, step, progressionElements);
+        progressionArr[questionIndex] = " ..";
+        return new String[] {String.join(" ", progressionArr), Integer.toString(rightAnswer)};
     }
 
     public static String[] generateProgression(int firstNumber, int step, int progressionElements) {
