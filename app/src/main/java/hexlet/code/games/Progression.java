@@ -28,7 +28,7 @@ public class Progression {
         var questionIndex = randomInt(1, progressionElements);
         var rightAnswer = firstNumber + (step * questionIndex);
         var progressionArr = generateProgression(firstNumber, step, progressionElements);
-        progressionArr[questionIndex] = " ..";
+        progressionArr[questionIndex] = "..";
         return new String[] {String.join(" ", progressionArr), Integer.toString(rightAnswer)};
     }
 
