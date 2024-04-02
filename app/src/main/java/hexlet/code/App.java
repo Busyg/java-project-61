@@ -23,12 +23,12 @@ public class App {
                 0 - Exit""");
         String gameNumber = scanner.next();
         switch (gameNumber) {
-            case "1" -> Cli.greetByName(scanner);
-            case "2" -> Even.run(scanner);
-            case "3" -> Calc.run(scanner);
-            case "4" -> GCD.run(scanner);
-            case "5" -> Progression.run(scanner);
-            case "6" -> Prime.run(scanner);
+            case "1" -> Cli.greetByName();
+            case "2" -> Even.run();
+            case "3" -> Calc.run();
+            case "4" -> GCD.run();
+            case "5" -> Progression.run();
+            case "6" -> Prime.run();
             default -> {
             }
         }

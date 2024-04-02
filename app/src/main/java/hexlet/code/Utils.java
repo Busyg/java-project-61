@@ -12,7 +12,7 @@ public class Utils {
     }
 
     public static int randomInt(int maxNumber) {
-        return RANDOM.nextInt(maxNumber);
+        return RANDOM.nextInt(MIN_NUMBER, maxNumber);
     }
 
     public static int randomInt(int minNumber, int maxNumber) {

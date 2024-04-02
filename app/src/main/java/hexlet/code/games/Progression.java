@@ -2,9 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
-import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.ROUNDS_COUNT;
 import static hexlet.code.Utils.randomInt;;
 
 public class Progression {
@@ -12,13 +10,13 @@ public class Progression {
     public static final int MIN_PROGRESSION = 5;
     public static final int MAX_PROGRESSION = 10;
 
-    public static void run(Scanner scanner) {
-        String[][] questionsArray = new String[GAME_ROUNDS][];
+    public static void run() {
+        String[][] questionsArray = new String[ROUNDS_COUNT][];
         String rules = "What number is missing in the progression?";
-        for (var i = 0; i < GAME_ROUNDS; i++) {
+        for (var i = 0; i < ROUNDS_COUNT; i++) {
             questionsArray[i] = generateRoundData();
         }
-        Engine.startGame(scanner, questionsArray, rules);
+        Engine.startGame(questionsArray, rules);
     }
 
     public static String[] generateRoundData() {
@@ -35,8 +33,8 @@ public class Progression {
     public static String[] generateProgression(int firstNumber, int step, int progressionElements) {
         var progressionString = new String[progressionElements];
         progressionString[0] = Integer.toString(firstNumber);
-        for (var y = 1; y < progressionElements; y++) {
-            progressionString[y] = Integer.toString(firstNumber + (step * y));
+        for (var i = 1; i < progressionElements; i++) {
+            progressionString[i] = Integer.toString(firstNumber + (step * i));
         }
         return progressionString;
     }

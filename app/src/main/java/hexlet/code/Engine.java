@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static final int GAME_ROUNDS = 3;
+    public static final int ROUNDS_COUNT = 3;
 
-    public static void startGame(Scanner scanner, String[][] questionsArray, String rules) {
-        String userName = Cli.greetByName(scanner);
+    public static void startGame(String[][] questionsArray, String rules) {
+        Scanner scanner = new Scanner(System.in);
+        String userName = Cli.greetByName();
         System.out.println(rules);
         for (String[] question : questionsArray) {
             System.out.println("Question: " + question[0]);

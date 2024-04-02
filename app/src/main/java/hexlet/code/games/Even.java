@@ -2,19 +2,17 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
-import static hexlet.code.Engine.GAME_ROUNDS;
+import static hexlet.code.Engine.ROUNDS_COUNT;
 import static hexlet.code.Utils.randomInt;
 
 public class Even {
-    public static void run(Scanner scanner) {
-        String[][] questionsArray = new String[GAME_ROUNDS][];
+    public static void run() {
+        String[][] questionsArray = new String[ROUNDS_COUNT][];
         String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        for (var i = 0; i < GAME_ROUNDS; i++) {
+        for (var i = 0; i < ROUNDS_COUNT; i++) {
             questionsArray[i] = generateRoundData();
         }
-        Engine.startGame(scanner, questionsArray, rules);
+        Engine.startGame(questionsArray, rules);
     }
 
     public static String[] generateRoundData() {
